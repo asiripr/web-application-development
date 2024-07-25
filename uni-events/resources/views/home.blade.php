@@ -8,21 +8,7 @@
 </head>
 <body>
     <header>
-        <div class="navbar">
-            <div class="logo">UNI</div>
-            <nav>
-                <ul>
-                    <li><a href="#">Home</a></li>
-                    <li><a href="#">Event</a></li>
-                    <li><a href="#">Profile</a></li>
-                    <li><a href="{{ route('about') }}">About Us</a></li>
-                </ul>
-            </nav>
-            <div class="auth-buttons">
-                <button class="login">Sign In</button>
-                <button class="join">Join Now</button>
-            </div>
-        </div>
+        @include('navbar')
         <div class="hero-image">
             <img src="assets/images/image 6.jpg" alt="Hero Image">
         </div>

@@ -9,11 +9,11 @@ Route::get('/', function () {
     return view('home');
 });
 
-//Route::get('/about', [HomeController::class,'about']);
+Route::get('/about', [HomeController::class,'about'])->name('about');
 
-Route::get('/home', [HomeController::class,'home']);
+Route::get('/home', [HomeController::class,'home'])->name('home');
 
-Route::get('/eventcreation', [AdminController::class,'eventcreation']);
+Route::get('/eventcreation', [AdminController::class,'eventcreation'])->name('eventcreation');
 
 
 Route::get('/dashboard', function () {

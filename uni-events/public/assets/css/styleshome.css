@@ -17,8 +17,8 @@ body {
     line-height: 1.6;
 }
 
-/* Navbar styling */
-.navbar {
+/* new_navbar styling */
+.new_navbar {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -27,20 +27,20 @@ body {
     color: #fff;
 }
 
-.navbar .logo {
+.new_navbar .new_logo {
     font-size: 1.5rem;
 }
 
-.navbar nav ul {
+.new_navbar nav ul {
     display: flex;
     gap: 1rem;
 }
 
-.navbar nav ul li a {
+.new_navbar nav ul li a {
     color: #fff;
 }
 
-.navbar .auth-buttons button {
+.new_navbar .new_auth_buttons button {
     background-color: #444;
     border: none;
     padding: 0.5rem 1rem;
@@ -49,7 +49,7 @@ body {
     cursor: pointer;
 }
 
-.navbar .auth-buttons button.join {
+.new_navbar .new_auth_buttons button.new_join {
     background-color: #28a745;
 }
 
@@ -132,4 +132,109 @@ footer {
     width: 100%;
     height: auto;
     display: block;
+}
+
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+h2 {
+    color: #333;
+    margin-bottom: 20px;
+}
+
+p {
+    color: #555;
+    line-height: 1.6;
+}
+
+/* About Us Section */
+.about-us {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    background-color: #f4f4f4;
+}
+
+.about-us .image {
+    flex: 1 1 300px;
+    max-width: 400px;
+    padding: 10px;
+}
+
+.about-us .image img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+.about-us .text {
+    flex: 2 1 300px;
+    max-width: 600px;
+    padding: 10px;
+}
+
+.social-links {
+    margin-top: 20px;
+}
+
+.social-links a {
+    display: inline-block;
+    margin-right: 10px;
+    text-decoration: none;
+    color: #555;
+}
+
+.social-links i {
+    margin-right: 5px;
+}
+
+/* Services Section */
+.services {
+    text-align: center;
+    padding: 20px;
+    background-color: #fff;
+}
+
+.services .service-cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.service-card {
+    flex: 1 1 300px;
+    max-width: 300px;
+    margin: 10px;
+    padding: 20px;
+    background-color: #f4f4f4;
+    border-radius: 10px;
+    text-align: center;
+}
+
+.service-card img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .about-us {
+        flex-direction: column;
+    }
+
+    .services .service-cards {
+        flex-direction: column;
+    }
+
+    .service-card {
+        max-width: 100%;
+    }
 }
