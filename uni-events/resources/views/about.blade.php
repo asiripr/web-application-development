@@ -4,24 +4,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>UNI Events</title>
-    <link rel="stylesheet" href="assets/css/styles.css">
+    <link rel="stylesheet" href="assets/css/styleshome.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
 <body>
     <header>
-        <div class="logo">UNI EVENTS</div>
-        <nav>
-            <ul>
-                <li><a href="#">Home</a></li>
-                <li><a href="#">Event</a></li>
-                <li><a href="#">Profile</a></li>
-                <li><a href="#">About us</a></li>
-            </ul>
-        </nav>
-        <div class="auth-buttons">
-            <button class="sign-in">Sign In</button>
-            <button class="join-now">Join Now</button>
-        </div>
+        @include('navbar')
     </header>
     <main>
         <section class="about-us">
