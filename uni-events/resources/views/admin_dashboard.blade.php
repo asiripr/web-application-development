@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,6 +10,7 @@
 
     <title>Document</title>
 </head>
+
 <body>
     <div class="dashboard-container">
         <header class="header">
@@ -27,28 +29,21 @@
                     </tr>
                 </thead>
                 <tbody>
-                    <tr>
-                        <td>1</td>
-                        <td>John Doe</td>
-                        <td>johndoe@example.com</td>
-                        <td>
-                            <button class="btn-update">Update</button>
-                            <button class="btn-delete">Delete</button>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>2</td>
-                        <td>Jane Smith</td>
-                        <td>janesmith@example.com</td>
-                        <td>
-                            <button class="btn-update">Update</button>
-                            <button class="btn-delete">Delete</button>
-                        </td>
-                    </tr>
-                    <!-- Add more user rows as needed -->
+                    @foreach ($data as $data)
+                        <tr>
+                            <td>{{ $data->id }}</td>
+                            <td>{{ $data->name }}</td>
+                            <td>{{ $data->email }}</td>
+                            <td>
+                                <button class="btn-update"><a href="{{ url('/home', $data->id) }}">Update</a></button>
+                                <button class="btn-delete"><a href="{{ url('/home', $data->id) }}">Delete</a></button>
+                            </td>
+                        </tr>
+                    @endforeach
                 </tbody>
             </table>
         </main>
     </div>
 </body>
+
 </html>
