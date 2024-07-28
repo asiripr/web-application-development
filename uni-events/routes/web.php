@@ -15,6 +15,9 @@ Route::get('/home', [HomeController::class,'home'])->name('home');
 
 Route::get('/eventcreation', [AdminController::class,'eventcreation'])->name('eventcreation');
 
+Route::get('/admindashboard', [HomeController::class,'index'])->name('index');
+
+
 
 Route::get('/dashboard', function () {
     return view('dashboard');
