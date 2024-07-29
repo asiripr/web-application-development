@@ -13,9 +13,14 @@ Route::get('/about', [HomeController::class,'about'])->name('about');
 
 Route::get('/home', [HomeController::class,'home'])->name('home');
 
+Route::get('/eventlist', [HomeController::class,'eventlist'])->name('eventlist');
+
+
 Route::get('/eventcreation', [AdminController::class,'eventcreation'])->name('eventcreation');
 
 Route::get('/admindashboard', [HomeController::class,'index'])->name('index');
+
+Route::get('/updateuser/{id}', [AdminController::class,'updateuser'])->name('updateuser');
 
 
 

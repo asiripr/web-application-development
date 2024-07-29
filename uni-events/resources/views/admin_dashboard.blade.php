@@ -35,8 +35,8 @@
                             <td>{{ $data->name }}</td>
                             <td>{{ $data->email }}</td>
                             <td>
-                                <button class="btn-update"><a href="{{ url('/home', $data->id) }}">Update</a></button>
-                                <button class="btn-delete"><a href="{{ url('/home', $data->id) }}">Delete</a></button>
+                                <button class="btn-update"><a href="{{ url('/updateuser', $data->id) }}">Update</a></button>
+                                <button class="btn-delete"><a href="{{ url('/updateuser', $data->id) }}">Delete</a></button>
                             </td>
                         </tr>
                     @endforeach

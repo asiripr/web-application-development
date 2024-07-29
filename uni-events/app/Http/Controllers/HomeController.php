@@ -13,6 +13,9 @@ class HomeController extends Controller
     public function home(){
         return view('home');
     }
+    public function eventlist(){
+        return view('eventlist');
+    }
     public function index(){
         $data = user::all();
         return view('admin_dashboard',compact("data"));

@@ -3,7 +3,7 @@
     <nav>
         <ul>
             <li><a href="{{ route('home') }}">Home</a></li>
-            <li><a href="{{ route('about') }}">Event</a></li>
+            <li><a href="{{ route('eventlist') }}">Event</a></li>
             <li><a href="{{ route('about') }}">Profile</a></li>
             <li><a href="{{ route('about') }}">About Us</a></li>
         </ul>
