@@ -4,20 +4,26 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\User;
+use Illuminate\Support\Facades\Auth;
+
 
 class HomeController extends Controller
 {
     public function about(){
-        return view('about');
+        $authdata = Auth::user();
+        return view('about',compact("authdata"));
     }
     public function home(){
-        return view('home');
+        $authdata = Auth::user();
+        return view('home',compact("authdata"));
     }
     public function eventlist(){
-        return view('eventlist');
+        $authdata = Auth::user();
+        return view('eventlist',compact("authdata"));
     }
     public function index(){
+        $authdata = Auth::user();
         $data = user::all();
-        return view('admin_dashboard',compact("data"));
+        return view('admin_dashboard',compact("data","authdata"));
     }
 }

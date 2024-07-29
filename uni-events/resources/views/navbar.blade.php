@@ -4,7 +4,7 @@
         <ul>
             <li><a href="{{ route('home') }}">Home</a></li>
             <li><a href="{{ route('eventlist') }}">Event</a></li>
-            <li><a href="{{ route('about') }}">Profile</a></li>
+            <li><a href="{{ route('home') }}">Profile</a></li>
             <li><a href="{{ route('about') }}">About Us</a></li>
         </ul>
     </nav>
@@ -12,9 +12,7 @@
         @if (Route::has('login'))
             <nav class="-mx-3 flex flex-1 justify-end">
                 @auth
-                    <a href="{{ url('/dashboard') }}" class="button button-login">
-                        Dashboard
-                    </a>
+                    <a href="{{ url('/dashboard') }}" class="button button-login">Dashboard</a>
                 @else
                     <a href="{{ route('login') }}" class="button button-login">
                         Log in

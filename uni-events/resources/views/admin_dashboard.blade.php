@@ -35,8 +35,13 @@
                             <td>{{ $data->name }}</td>
                             <td>{{ $data->email }}</td>
                             <td>
-                                <button class="btn-update"><a href="{{ url('/updateuser', $data->id) }}">Update</a></button>
-                                <button class="btn-delete"><a href="{{ url('/updateuser', $data->id) }}">Delete</a></button>
+                                <button class="btn-update"><a href="{{url('/updateuser', $data->id) }}">Update</a></button>
+                                
+                                @if ($data->usertype=="student")
+                                    <button class="btn-delete"><a href="{{url('/deleteuser',$data->id)}}">Delete</a></button>   
+                                @else
+                                    <button class="btn-delete">Delete</button>   
+                                @endif 
                             </td>
                         </tr>
                     @endforeach

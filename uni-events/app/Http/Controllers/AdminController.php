@@ -4,18 +4,29 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\User;
+use Illuminate\Support\Facades\Auth;
 
 class AdminController extends Controller
 {
     public function eventcreation(){
-        return view('admin_event_creation');
+        $authdata = Auth::user();
+        return view('admin_event_creation',compact("authdata"));
     }
     public function updateuser($id){
+        $authdata = Auth::user();        
         $data = user::find($id);
-        return view("admin_updateuser",compact("data"));
+        return view("admin_updateuser",compact("data","authdata"));
+    }
+
+    public function deleteuser($id){
+        $authdata = Auth::user();
+        $data=user::find($id);
+        $data->delete();
+        return redirect()->back();
     }
 
     public function updateauser(Request $request, $id){
+        $authdata = Auth::user();
         $data = user::find($id);
    
         $data->name = $request->name;
@@ -23,6 +34,6 @@ class AdminController extends Controller
 
         $data->save();
 
-        return redirect()->back();
+        return redirect('/admindashboard')->with('success', 'User updated successfully');
     }
 }

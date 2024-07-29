@@ -23,11 +23,11 @@
                 @csrf
                 <div>
                   <label>Name</label>
-                  <input style="color: grey" type="text" name="name" value="{{$data->name}}" required="">
+                  <input style="color: grey" type="text" name="name" value="{{$data->name}}">
                 </div>
                 <div>
                   <label>Email</label>
-                  <input style="color: grey" type="text" name="speciality" value="{{$data->email}}" required="">
+                  <input style="color: grey" type="text" name="email" value="{{$data->email}}">
                 </div>
                 <div>
                     <input type="submit" value="Update User">
