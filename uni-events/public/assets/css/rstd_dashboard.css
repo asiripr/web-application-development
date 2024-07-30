@@ -1,0 +1,139 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+header {
+    background-color: #333;
+    color: white;
+    padding: 1rem 0;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+}
+
+nav ul li {
+    margin: 0 1rem;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+}
+
+main {
+    max-width: 1200px;
+    margin: 2rem auto;
+    padding: 0 1rem;
+}
+
+.create-proposal-section, .submitted-proposals-section, .profile-section {
+    background-color: white;
+    padding: 1rem;
+    margin-bottom: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.create-proposal-section form label,
+.create-proposal-section form input,
+.create-proposal-section form select,
+.create-proposal-section form textarea,
+.create-proposal-section form button {
+    display: block;
+    width: 100%;
+    margin-bottom: 1rem;
+    padding: 0.5rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.create-proposal-section form button {
+    background-color: #333;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+.create-proposal-section form button:hover {
+    background-color: #555;
+}
+
+.submitted-proposals-section .proposal-card {
+    background-color: #f9f9f9;
+    padding: 1rem;
+    margin-bottom: 1rem;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+}
+
+.submitted-proposals-section .proposal-card h3 {
+    margin-top: 0;
+}
+
+.submitted-proposals-section .proposal-card a {
+    color: #333;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.submitted-proposals-section .proposal-card a:hover {
+    text-decoration: underline;
+}
+
+.profile-section button {
+    background-color: #333;
+    color: white;
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.profile-section button:hover {
+    background-color: #555;
+}
+
+
+/* new_navbar styling */
+.new_navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    background-color: #333;
+    color: #fff;
+}
+
+.new_navbar .new_logo {
+    font-size: 1.5rem;
+}
+
+.new_navbar nav ul {
+    display: flex;
+    gap: 1rem;
+}
+
+.new_navbar nav ul li a {
+    color: #fff;
+}
+
+.new_navbar .new_auth_buttons button {
+    background-color: #444;
+    border: none;
+    padding: 0.5rem 1rem;
+    color: #fff;
+    margin-left: 0.5rem;
+    cursor: pointer;
+}
+
+.new_navbar .new_auth_buttons button.new_join {
+    background-color: #28a745;
+}

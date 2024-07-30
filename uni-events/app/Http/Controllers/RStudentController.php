@@ -7,6 +7,9 @@ use App\Models\Event;
 
 class RStudentController extends Controller
 {
+    public function rstddashboard(){
+        return view('rstd_dashboard');
+    }
     public function eventcreation(){
         return view('rstd_event_creation');
     }
