@@ -27,7 +27,7 @@ Route::get('/deleteuser/{id}', [AdminController::class,'deleteuser'])->name('del
 
 Route::get('/eventcreation', [RStudentController::class,'eventcreation'])->name('eventcreation');
 
-Route::post('/updateanevent/{id}', [RStudentController::class,'updateanevent'])->name('updateanevent');
+Route::post('/updateanevent', [RStudentController::class,'updateanevent'])->name('updateanevent');
 
 
 Route::get('/dashboard', function () {

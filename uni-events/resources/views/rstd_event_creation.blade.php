@@ -19,7 +19,7 @@
 
         <div class="main-content">
             <div class="event-form">
-                <form action="{{url('/updateanevent',$data->id)}}" method="post">
+                <form action="{{url('/updateanevent')}}" method="post" enctype="multipart/form-data">
                     @csrf
                     <label for="eventName">Event Name</label>
                     <input type="text" id="eventName" name="eventName" required>

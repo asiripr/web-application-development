@@ -3,28 +3,31 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Models\Event;
 
 class RStudentController extends Controller
 {
     public function eventcreation(){
         return view('rstd_event_creation');
     }
-    public function updateanevent(Request $request, $id){
-        $data = user::find($id);
+    public function updateanevent(Request $request){
+        $eventdata = new Event();    
 
-        $image = $request->image;
+        $eventdata->name = $request->eventName;
+        $eventdata->faculty = $request->faculty;
+        $eventdata->date = $request->date;
+        $eventdata->venue = $request->venue;
 
-        if ($image) {
-            $imagename = time().'.'.$image->getClientOriginalExtension();
-            $request->image->move('chefimage',$imagename);
-            $data->image = $imagename;
-        }      
+        $document = $request->proposal;
 
-        $data->name = $request->name;
-        $data->speciality = $request->speciality;
+        if ($document) {
+            $documentname = time().'.'.$document->getClientOriginalExtension();
+            $request->proposal->move('proposaldocument',$documentname);
+            $eventdata->proposal = $documentname;
+        } 
 
 
-        $data->save();
+        $eventdata->save();
 
         return redirect()->back();
     }
