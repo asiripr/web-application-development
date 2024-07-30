@@ -31,8 +31,14 @@ class AuthenticatedSessionController extends Controller
         if ($request->user()->usertype === 'admin') {
             return redirect('admindashboard');
         }
+        else if ($request->user()->usertype === 'auser') {
+            return redirect('auserdashboard');
+        }
+        else if ($request->user()->usertype === 'rstd') {
+            return redirect('rstddashboard');
+        }
         else {
-            return redirect()->intended(route('dashboard'));
+            return redirect()->intended(route('stddashboard'));
         }      
     }
 

@@ -30,8 +30,7 @@ Route::get('/deleteuser/{id}', [AdminController::class,'deleteuser'])->name('del
 
 Route::get('/eventcreation', [RStudentController::class,'eventcreation'])->name('eventcreation');
 
-Route::post('/updateanevent', [RStudentController::class,'updateanevent'])->name('updateanevent');
-
+Route::post('/updateanevent', [RStudentController::class,'updateanevent'])->name('updateanevent'); // there is a issue with this
 
 Route::get('/stddashboard', [StdController::class,'stddashboard'])->name('stddashboard');
 
