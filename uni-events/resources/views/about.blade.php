@@ -42,8 +42,6 @@
             </div>
         </section>
     </main>
-    <footer>
-        <img src="assets/images/fotter.jpg" alt="Footer">
-    </footer>
+    @include('footer')
 </body>
 </html>

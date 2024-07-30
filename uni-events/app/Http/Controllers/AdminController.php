@@ -8,10 +8,6 @@ use Illuminate\Support\Facades\Auth;
 
 class AdminController extends Controller
 {
-    public function eventcreation(){
-        $authdata = Auth::user();
-        return view('admin_event_creation',compact("authdata"));
-    }
     public function updateuser($id){
         $authdata = Auth::user();        
         $data = user::find($id);

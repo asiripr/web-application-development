@@ -19,7 +19,8 @@
 
         <div class="main-content">
             <div class="event-form">
-                <form action="submit_event.php" method="post">
+                <form action="{{url('/updateanevent')}}" method="post" enctype="multipart/form-data">
+                    @csrf
                     <label for="eventName">Event Name</label>
                     <input type="text" id="eventName" name="eventName" required>
 
@@ -46,8 +47,6 @@
                     <input type="file" name="proposal" id="">
 
                     <button type="submit" class="submit-btn">Submit</button>
-                    <button type="reset" class="delete-btn">Delete</button>
-
                 </form>
             </div>
 
@@ -57,9 +56,7 @@
         </div>
     </div>
 
-
-
-    <!-- footer section -->
+    @include('footer')
 
 </body>
 

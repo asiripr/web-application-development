@@ -82,8 +82,6 @@
         </section>
     </main>
     
-    <footer>
-        <img src="assets/images/fotter.jpg" alt="Footer Image" class="footer-image">
-    </footer>
+    @include('footer')
 </body>
 </html>
