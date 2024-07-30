@@ -5,6 +5,7 @@ use App\Http\Controllers\AuserController;
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\RStudentController;
 use App\Http\Controllers\StdController;
+
 use App\Http\Middleware\Admin;
 use Illuminate\Support\Facades\Route;
 
@@ -30,6 +31,7 @@ Route::get('/deleteuser/{id}', [AdminController::class,'deleteuser'])->name('del
 Route::get('/eventcreation', [RStudentController::class,'eventcreation'])->name('eventcreation');
 
 Route::post('/updateanevent', [RStudentController::class,'updateanevent'])->name('updateanevent');
+
 
 Route::get('/stddashboard', [StdController::class,'stddashboard'])->name('stddashboard');
 
