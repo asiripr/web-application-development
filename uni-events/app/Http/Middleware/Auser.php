@@ -4,10 +4,11 @@ namespace App\Http\Middleware;
 
 use Closure;
 use Illuminate\Http\Request;
-use Illuminate\Support\Facades\Auth;
 use Symfony\Component\HttpFoundation\Response;
+use Illuminate\Support\Facades\Auth;
 
-class Admin
+
+class Auser
 {
     /**
      * Handle an incoming request.
@@ -17,7 +18,7 @@ class Admin
     public function handle(Request $request, Closure $next)
     {
         if (Auth::check()) {
-            if (Auth::user()->usertype == 'admin') {
+            if (Auth::user()->usertype == 'auser') {
                 return $next($request);
             } else {
                 return $this->redirectToUserDashboard();
@@ -31,8 +32,8 @@ class Admin
     {
         $user = Auth::user();
         switch ($user->usertype) {
-            case 'auser':
-                return redirect()->route('auserdashboard');
+            case 'admin':
+                return redirect()->route('admindashboard');
             case 'rstd':
                 return redirect()->route('rstddashboard');
             default:

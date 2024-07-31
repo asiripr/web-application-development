@@ -8,6 +8,11 @@ use Illuminate\Support\Facades\Auth;
 
 class AdminController extends Controller
 {
+    public function admindashboard(){
+        $authdata = Auth::user();
+        $data = user::all();
+        return view('admin_dashboard',compact("data","authdata"));
+    }
     public function updateuser($id){
         $authdata = Auth::user();        
         $data = user::find($id);

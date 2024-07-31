@@ -8,6 +8,8 @@ use Illuminate\Http\RedirectResponse;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\View\View;
+use Illuminate\Support\Facades\Redirect;
+use Illuminate\Validation\ValidationException;
 
 class AuthenticatedSessionController extends Controller
 {
@@ -22,18 +24,35 @@ class AuthenticatedSessionController extends Controller
     /**
      * Handle an incoming authentication request.
      */
-    public function store(LoginRequest $request): RedirectResponse
+    public function store(Request $request)
     {
-        $request->authenticate();
+        $request->validate([
+            'email' => ['required', 'email'],
+            'password' => ['required'],
+        ]);
+
+        if (!Auth::attempt($request->only('email', 'password'), $request->boolean('remember'))) {
+            throw ValidationException::withMessages([
+                'email' => __('auth.failed'),
+            ]);
+        }
 
         $request->session()->regenerate();
 
-        if ($request->user()->usertype === 'admin') {
-            return redirect('admindashboard');
+        return $this->authenticated($request, Auth::user());
+    }
+
+    // redirect to dashboards
+    protected function authenticated(Request $request, $user){
+        if ($user->usertype == 'admin') {
+            return Redirect::route('admindashboard');
+        } elseif ($user->usertype == 'auser') {
+            return Redirect::route('auserdashboard');
+        } elseif ($user->usertype == 'rstd') {
+            return Redirect::route('rstddashboard');
+        } else {
+            return Redirect::route('stddashboard');
         }
-        else {
-            return redirect()->intended(route('dashboard'));
-        }      
     }
 
     /**
