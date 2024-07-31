@@ -21,16 +21,16 @@ class RedirectIfAuthenticated
 
             switch ($user->usertype) {
                 case 'admin':
-                    return redirect(('/admin_dashboard'));
+                    return redirect(('/admindashboard'));
                     break;
                 case 'auser':
-                    return redirect(('/auser_dashboard'));
+                    return redirect(('/auserdashboard'));
                     break;
                 case 'rstd':
-                    return redirect(('/rstd_dashboard'));
+                    return redirect(('/rstddashboard'));
                     break;
                 default:
-                    return redirect('/student_dashboard');
+                    return redirect('/stddashboard');
                     break;
             }
         }

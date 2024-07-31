@@ -17,10 +17,18 @@ class Rstd
      */
     public function handle($request, Closure $next)
     {
-        if (Auth::check() && Auth::user()->user_type === 'rstd') {
-            return $next($request);
+        if (Auth::check() && Auth::user()->user_type === 'admin') {
+            //return $next($request);
+            return redirect('/admindashboard');
         }
-
-        return redirect('/student/dashboard'); // Redirect to student dashboard if not rstd
+        else if (Auth::check() && Auth::user()->user_type === 'auser') {
+            //return $next($request);
+            return redirect('/auserdashboard');
+        }
+        else if (Auth::check() && Auth::user()->user_type === 'rstd') {
+            //return $next($request);
+            return redirect('/rstddashboard');
+        }
+        return redirect('/stddashboard'); // Redirect to student dashboard if not admin
     }
 }
