@@ -29,11 +29,11 @@ Route::post('/updateauser/{id}', [AdminController::class,'updateauser'])->name('
 
 Route::get('/deleteuser/{id}', [AdminController::class,'deleteuser'])->name('deleteuser');
 
-Route::get('/eventcreation', [RStudentController::class,'eventcreation'])->name('eventcreation');
-
 Route::post('/updateanevent', [RStudentController::class,'updateanevent'])->name('updateanevent'); // there is a issue with this
 
 Route::get('/stddashboard', [StdController::class,'stddashboard'])->name('stddashboard');
+
+Route::get('/eventcreation', [RStudentController::class,'eventcreation'])->name('eventcreation')->middleware(['auth', 'rstd_events']);;
 
 Route::get('/rstddashboard', [RStudentController::class,'rstddashboard'])->name('rstddashboard')->middleware(['auth','rstd']);
 
