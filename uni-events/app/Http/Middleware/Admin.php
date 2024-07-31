@@ -14,19 +14,29 @@ class Admin
      *
      * @param  \Closure(\Illuminate\Http\Request): (\Symfony\Component\HttpFoundation\Response)  $next
      */
-    public function handle($request, Closure $next)
+    public function handle(Request $request, Closure $next)
     {
         if (Auth::check()) {
-            if (Auth::user()->user_type == 'admin') {
+            if (Auth::user()->usertype == 'admin') {
                 return $next($request);
-            } elseif (Auth::user()->user_type == 'auser') {
-                return redirect()->route('auserdashboard');
-            } elseif (Auth::user()->user_type == 'rstd') {
-                return redirect()->route('rstddashboard');
             } else {
-                return redirect()->route('stddashboard');
+                return $this->redirectToUserDashboard();
             }
         }
-        return redirect('/'); // Redirect to student dashboard if not admin
+
+        return redirect('/');
+    }
+
+    protected function redirectToUserDashboard()
+    {
+        $user = Auth::user();
+        switch ($user->usertype) {
+            case 'auser':
+                return redirect()->route('auserdashboard');
+            case 'rstd':
+                return redirect()->route('rstddashboard');
+            default:
+                return redirect()->route('stddashboard');
+        }
     }
 }

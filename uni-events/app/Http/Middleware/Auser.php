@@ -15,20 +15,29 @@ class Auser
      *
      * @param  \Closure(\Illuminate\Http\Request): (\Symfony\Component\HttpFoundation\Response)  $next
      */
-    public function handle($request, Closure $next)
+    public function handle(Request $request, Closure $next)
     {
         if (Auth::check()) {
-            if (Auth::user()->user_type == 'auser') {
+            if (Auth::user()->usertype == 'auser') {
                 return $next($request);
-            } elseif (Auth::user()->user_type == 'admin') {
-                return redirect()->route('admindashboard');
-            } elseif (Auth::user()->user_type == 'rstd') {
-                return redirect()->route('rstddashboard');
             } else {
-                return redirect()->route('stddashboard');
+                return $this->redirectToUserDashboard();
             }
         }
 
         return redirect('/');
+    }
+
+    protected function redirectToUserDashboard()
+    {
+        $user = Auth::user();
+        switch ($user->usertype) {
+            case 'admin':
+                return redirect()->route('admindashboard');
+            case 'rstd':
+                return redirect()->route('rstddashboard');
+            default:
+                return redirect()->route('stddashboard');
+        }
     }
 }

@@ -15,20 +15,29 @@ class Rstd
      *
      * @param  \Closure(\Illuminate\Http\Request): (\Symfony\Component\HttpFoundation\Response)  $next
      */
-    public function handle($request, Closure $next)
+    public function handle(Request $request, Closure $next)
     {
         if (Auth::check()) {
             if (Auth::user()->user_type == 'rstd') {
                 return $next($request);
-            } elseif (Auth::user()->user_type == 'admin') {
-                return redirect()->route('admindashboard');
-            } elseif (Auth::user()->user_type == 'auser') {
-                return redirect()->route('auserdashboard');
             } else {
-                return redirect()->route('stddashboard');
+                return $this->redirectToUserDashboard();
             }
         }
 
         return redirect('/');
+    }
+
+    protected function redirectToUserDashboard()
+    {
+        $user = Auth::user();
+        switch ($user->user_type) {
+            case 'admin':
+                return redirect()->route('admindashboard');
+            case 'auser':
+                return redirect()->route('auserdashboard');
+            default:
+                return redirect()->route('stddashboard');
+        }
     }
 }
