@@ -23,7 +23,7 @@ Route::get('/home', [HomeController::class,'home'])->name('home');
 
 Route::get('/eventlist', [HomeController::class,'eventlist'])->name('eventlist');
 
-Route::get('/admindashboard', [HomeController::class,'index'])->middleware(['auth','admin']);
+Route::get('/admindashboard', [HomeController::class,'index'])->name('index')->middleware(['auth','admin']);
 
 Route::get('/updateuser/{id}', [AdminController::class,'updateuser'])->name('updateuser');
 
@@ -37,9 +37,9 @@ Route::post('/updateanevent', [RStudentController::class,'updateanevent'])->name
 
 Route::get('/stddashboard', [StdController::class,'stddashboard'])->name('stddashboard');
 
-Route::get('/rstddashboard', [RStudentController::class,'rstddashboard'])->middleware(['auth','rstd']);
+Route::get('/rstddashboard', [RStudentController::class,'rstddashboard'])->name('rstddashboard')->middleware(['auth','rstd']);
 
-Route::get('/auserdashboard', [AuserController::class,'auserdashboard'])->middleware(['auth','auser']);
+Route::get('/auserdashboard', [AuserController::class,'auserdashboard'])->name('auserdashboard')->middleware(['auth','auser']);
 
 
 Route::get('/dashboard', function () {
