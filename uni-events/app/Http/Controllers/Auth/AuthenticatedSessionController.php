@@ -44,11 +44,11 @@ class AuthenticatedSessionController extends Controller
 
     // redirect to dashboards
     protected function authenticated(Request $request, $user){
-        if ($user->user_type == 'admin') {
+        if ($user->usertype == 'admin') {
             return Redirect::route('admindashboard');
-        } elseif ($user->user_type == 'auser') {
+        } elseif ($user->usertype == 'auser') {
             return Redirect::route('auserdashboard');
-        } elseif ($user->user_type == 'rstd') {
+        } elseif ($user->usertype == 'rstd') {
             return Redirect::route('rstddashboard');
         } else {
             return Redirect::route('stddashboard');

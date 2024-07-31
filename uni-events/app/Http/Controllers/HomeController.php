@@ -21,9 +21,4 @@ class HomeController extends Controller
         $authdata = Auth::user();
         return view('eventlist',compact("authdata"));
     }
-    public function index(){
-        $authdata = Auth::user();
-        $data = user::all();
-        return view('admin_dashboard',compact("data","authdata"));
-    }
 }

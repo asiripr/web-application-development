@@ -18,7 +18,7 @@ class Rstd
     public function handle(Request $request, Closure $next)
     {
         if (Auth::check()) {
-            if (Auth::user()->user_type == 'rstd') {
+            if (Auth::user()->usertype == 'rstd') {
                 return $next($request);
             } else {
                 return $this->redirectToUserDashboard();
@@ -31,7 +31,7 @@ class Rstd
     protected function redirectToUserDashboard()
     {
         $user = Auth::user();
-        switch ($user->user_type) {
+        switch ($user->usertype) {
             case 'admin':
                 return redirect()->route('admindashboard');
             case 'auser':

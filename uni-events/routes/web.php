@@ -23,8 +23,6 @@ Route::get('/home', [HomeController::class,'home'])->name('home');
 
 Route::get('/eventlist', [HomeController::class,'eventlist'])->name('eventlist');
 
-Route::get('/admindashboard', [HomeController::class,'index'])->name('index')->middleware(['auth','admin']);
-
 Route::get('/updateuser/{id}', [AdminController::class,'updateuser'])->name('updateuser');
 
 Route::post('/updateauser/{id}', [AdminController::class,'updateauser'])->name('updateauser');
@@ -41,6 +39,7 @@ Route::get('/rstddashboard', [RStudentController::class,'rstddashboard'])->name(
 
 Route::get('/auserdashboard', [AuserController::class,'auserdashboard'])->name('auserdashboard')->middleware(['auth','auser']);
 
+Route::get('/admindashboard', [AdminController::class, 'admindashboard'])->name('admindashboard')->middleware('auth', 'admin');
 
 Route::get('/dashboard', function () {
     return view('dashboard');

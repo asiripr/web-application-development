@@ -13,8 +13,8 @@ return Application::configure(basePath: dirname(__DIR__))
     ->withMiddleware(function (Middleware $middleware) {
         $middleware->alias([
             'admin'=>\App\Http\Middleware\Admin::class,
-            'rstd'=>\App\Http\Middleware\Rstd::class,
             'auser'=>\App\Http\Middleware\Auser::class,
+            'rstd'=>\App\Http\Middleware\Rstd::class,
         ]);
     })
     ->withExceptions(function (Exceptions $exceptions) {
