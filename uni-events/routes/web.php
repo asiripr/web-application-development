@@ -33,13 +33,13 @@ Route::post('/updateanevent', [RStudentController::class,'updateanevent'])->name
 
 Route::get('/stddashboard', [StdController::class,'stddashboard'])->name('stddashboard');
 
-Route::get('/eventcreation', [RStudentController::class,'eventcreation'])->name('eventcreation')->middleware(['auth', 'rstd_events']);;
+Route::get('/eventcreation', [RStudentController::class,'eventcreation'])->name('eventcreation')->middleware(['auth', 'rstd']);;
 
 Route::get('/rstddashboard', [RStudentController::class,'rstddashboard'])->name('rstddashboard')->middleware(['auth','rstd']);
 
 Route::get('/auserdashboard', [AuserController::class,'auserdashboard'])->name('auserdashboard')->middleware(['auth','auser']);
 
-Route::get('/admindashboard', [AdminController::class, 'admindashboard'])->name('admindashboard')->middleware('auth', 'admin');
+Route::get('/admindashboard', [AdminController::class, 'admindashboard'])->name('admindashboard')->middleware(['auth', 'admin']);
 
 Route::get('/dashboard', function () {
     return view('dashboard');
