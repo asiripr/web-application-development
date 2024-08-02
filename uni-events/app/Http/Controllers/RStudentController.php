@@ -8,7 +8,8 @@ use App\Models\Event;
 class RStudentController extends Controller
 {
     public function rstddashboard(){
-        return view('rstd_dashboard');
+        $eventdata = Event::all();
+        return view('rstd_dashboard', compact('eventdata'));
     }
     public function eventcreation(){
         return view('rstd_event_creation');
@@ -20,6 +21,8 @@ class RStudentController extends Controller
         $eventdata->faculty = $request->faculty;
         $eventdata->date = $request->date;
         $eventdata->venue = $request->venue;
+        $eventdata->event_type = $request->event_type;
+        $eventdata->is_approved = 0;
 
         $document = $request->proposal;
 

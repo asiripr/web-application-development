@@ -22,6 +22,7 @@
                     <p>Organized by: {{$eventdata->faculty}}</p>
                     <p>Date: {{$eventdata->date}}</p>
                     <p>Venue: {{$eventdata->venue}}</p>
+                    <p>Event Type: {{$eventdata->event_type}}</p>
                     <p>Proposal: <a href="#">Click Here To Download</a></p>
                     <button onclick="showApprovalForm(this)">Review Proposal</button>
                     <div class="approval-form" style="display: none;">
