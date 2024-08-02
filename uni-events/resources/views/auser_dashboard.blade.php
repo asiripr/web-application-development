@@ -27,8 +27,8 @@
                     <button onclick="showApprovalForm(this)">Review Proposal</button>
                     <div class="approval-form" style="display: none;">
                         <textarea placeholder="Instructions (optional)"></textarea>
-                        <button>Approve</button>
-                        <button>Reject</button>
+                        <button><a href="">Approve</a></button>
+                        <button><a href="">Reject</a></button>
                     </div>
                 </div>
             @endforeach
