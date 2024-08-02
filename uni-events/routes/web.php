@@ -5,6 +5,8 @@ use App\Http\Controllers\AuserController;
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\RStudentController;
 use App\Http\Controllers\StdController;
+use App\Http\Controllers\EventController;
+
 
 use App\Http\Middleware\Admin;
 use App\Http\Middleware\Rstd;
@@ -29,7 +31,7 @@ Route::post('/updateauser/{id}', [AdminController::class,'updateauser'])->name('
 
 Route::get('/deleteuser/{id}', [AdminController::class,'deleteuser'])->name('deleteuser');
 
-Route::post('/updateanevent', [RStudentController::class,'updateanevent'])->name('updateanevent'); // there is a issue with this
+Route::post('/updateanevent', [RStudentController::class,'updateanevent'])->name('updateanevent'); // there is an issue with this
 
 Route::get('/stddashboard', [StdController::class,'stddashboard'])->name('stddashboard');
 
@@ -40,6 +42,11 @@ Route::get('/rstddashboard', [RStudentController::class,'rstddashboard'])->name(
 Route::get('/auserdashboard', [AuserController::class,'auserdashboard'])->name('auserdashboard')->middleware(['auth','auser']);
 
 Route::get('/admindashboard', [AdminController::class, 'admindashboard'])->name('admindashboard')->middleware(['auth', 'admin']);
+
+Route::post('/approveevent/{id}', [EventController::class,'approve'])->name('approve');
+
+Route::post('/rejectevent/{id}', [EventController::class,'reject'])->name('reject');
+
 
 Route::get('/dashboard', function () {
     return view('dashboard');

@@ -27,14 +27,25 @@
                     <label for="faculty">Faculty</label>
                     <select id="faculty" name="faculty" required>
                         <option value="">Select Faculty</option>
-                        <option value="Computing">Faculty of Computing</option>
-                        <option value="Management">Faculty of Applied Sciencest</option>
-                        <option value="Medicine">Faculty of Medicine</option>
-                        <option value="Agriculture">Faculty of Agricultural Sciences</option>
-                        <option value="Management">Faculty of Management Studies</option>
-                        <option value="Socail">Faculty of Socail Sciences and Languages</option>
-                        <option value="Technology">Faculty of Technology</option>
-                        <option value="Geomatics">Faculty of Geomatics</option>
+                        <option value="Faculty of Computing">Faculty of Computing</option>
+                        <option value="Faculty of Applied Science">Faculty of Applied Science</option>
+                        <option value="Faculty of Medicine">Faculty of Medicine</option>
+                        <option value="Faculty of Agricultural Sciences">Faculty of Agricultural Sciences</option>
+                        <option value="Faculty of Management Studies">Faculty of Management Studies</option>
+                        <option value="Faculty of Socail Sciences and Languages">Faculty of Socail Sciences and Languages</option>
+                        <option value="Faculty of Technology">Faculty of Technology</option>
+                        <option value="Faculty of Geomatics">Faculty of Geomatics</option>
+                    </select>
+
+                    <label for="event_type">Event Type</label>
+                    <select id="event_type" name="event_type" required>
+                        <option value="">Select Type</option>
+                        <option value="Sport">Sport</option>
+                        <option value="Dance">Dance</option>
+                        <option value="Music">Music</option>
+                        <option value="Drama">Drama</option>
+                        <option value="Film">Film</option>
+                        <option value="Other">Other</option>
                     </select>
 
                     <label for="date">Date</label>
