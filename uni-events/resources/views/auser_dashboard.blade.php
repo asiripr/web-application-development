@@ -26,9 +26,16 @@
                     <p>Proposal: <a href="#">Click Here To Download</a></p>
                     <button onclick="showApprovalForm(this)">Review Proposal</button>
                     <div class="approval-form" style="display: none;">
-                        <textarea placeholder="Instructions (optional)"></textarea>
-                        <button><a href="">Approve</a></button>
-                        <button><a href="">Reject</a></button>
+                        <form action="{{route('approveevent'),$eventdata->id}}" method="post">
+                            @csrf
+                            <textarea placeholder="Instructions (optional)"></textarea>
+                            <button type="submit">Approve</button>
+                        </form>
+                        <form action="{{route('rejectevent'),$eventdata->id}}" method="post">
+                            @csrf
+                            <textarea placeholder="Instructions (optional)"></textarea>
+                            <button type="submit">Reject</button>
+                        </form>
                     </div>
                 </div>
             @endforeach
