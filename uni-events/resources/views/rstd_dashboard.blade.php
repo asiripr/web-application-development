@@ -33,6 +33,7 @@
                 <p>Status: Approved</p>
                 <a href="#">View Details</a>
             </div>
+            {{-- update here with for each loop --}}
             <!-- Add more proposal cards as needed -->
         </section>
 
