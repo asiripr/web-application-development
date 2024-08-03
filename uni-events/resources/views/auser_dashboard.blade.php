@@ -16,24 +16,24 @@
     <main>
         <section class="pending-proposals-section">
             <h2>Pending Proposals</h2>
-            @foreach ($eventdata as $eventdata)
+            @foreach ($eventdata as $event)
                 <div class="proposal-card">
-                    <h3>Event Name: {{$eventdata->name}}</h3>
-                    <p>Organized by: {{$eventdata->faculty}}</p>
-                    <p>Date: {{$eventdata->date}}</p>
-                    <p>Venue: {{$eventdata->venue}}</p>
-                    <p>Event Type: {{$eventdata->event_type}}</p>
+                    <h3>Event Name: {{$event->name}}</h3>
+                    <p>Organized by: {{$event->faculty}}</p>
+                    <p>Date: {{$event->date}}</p>
+                    <p>Venue: {{$event->venue}}</p>
+                    <p>Event Type: {{$event->event_type}}</p>
                     <p>Proposal: <a href="#">Click Here To Download</a></p>
                     <button onclick="showApprovalForm(this)">Review Proposal</button>
                     <div class="approval-form" style="display: none;">
-                        <form action="{{route('approveevent'),$eventdata->id}}" method="post">
+                            <form action="{{url('/approveevent',$event->id)}}" method="post">
                             @csrf
-                            <textarea placeholder="Instructions (optional)"></textarea>
+                            <textarea placeholder="Instructions (optional)" name="instructions"></textarea>
                             <button type="submit">Approve</button>
                         </form>
-                        <form action="{{route('rejectevent'),$eventdata->id}}" method="post">
+                        <form action="{{url('/rejectevent', $event->id) }}" method="post">
                             @csrf
-                            <textarea placeholder="Instructions (optional)"></textarea>
+                            <textarea placeholder="Instructions (optional)" name="instructions"></textarea>
                             <button type="submit">Reject</button>
                         </form>
                     </div>

@@ -12,7 +12,7 @@ class EventController extends Controller
         $eventdata = Event::find($id);
         if ($eventdata) {
             $eventdata->is_approved = 1;
-            $eventdata->instructions = $request->input('instructions');
+            $eventdata->instructions = $request->instructions;
             $eventdata->save();
             return redirect()->back()->with('success','Event approved successfully.');
         }
