@@ -23,10 +23,6 @@
             <h2>Submitted Proposals</h2>
             @foreach ($eventdata as $eventdata)
                 <div class="proposal-card">
-                    <h3>Event Name: {{ $eventdata->name }}</h3>
-                    <p>Date: {{ $eventdata->date }}</p>
-                    <p>Venue: {{ $eventdata->venue }}</p>
-                    <p>Proposal: <a href="#">Click Here To Download</a></p>
                     <p>Status:
                         @if ($eventdata->is_approved == 0)
                             Not Approved
@@ -34,6 +30,9 @@
                             Approved
                         @endif
                     </p>
+                    <h3>Event Name: {{ $eventdata->name }}</h3>
+                    <p>Date: {{ $eventdata->date }}</p>
+                    <p>Venue: {{ $eventdata->venue }}</p>
                 </div>
             @endforeach
         </section>

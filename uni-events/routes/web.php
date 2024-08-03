@@ -47,6 +47,9 @@ Route::post('/approveevent/{id}', [EventController::class,'approve'])->name('app
 
 Route::post('/rejectevent/{id}', [EventController::class,'reject'])->name('reject');
 
+Route::get('/downloadproposal/{id}', [AuserController::class,'downloadproposal'])->name('downloadproposal');
+
+
 
 Route::get('/dashboard', function () {
     return view('dashboard');

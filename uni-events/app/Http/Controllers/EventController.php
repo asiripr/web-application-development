@@ -22,6 +22,7 @@ class EventController extends Controller
 
     public function reject(Request $request, $id){
         $eventdata = Event::find($id);
+        dd($eventdata->proposal);
         if ($eventdata) {
             $eventdata->is_approved = 0;
             $eventdata->instructions = $request->input('instructions');
