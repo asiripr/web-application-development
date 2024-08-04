@@ -466,10 +466,80 @@ input[type="submit"] {
 input[type="submit"]:hover {
     background-color: #0056b3;
 }
+
+/* Coming Soon Items*/
+.coming-soon {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    grid-template-rows: auto;
+    gap: 20px;
+    padding: 20px;
+}
+
+.coming-soon-item {
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    margin: 10px;
+    padding: 20px;
+    width: calc(100% - 40px); /* Full width minus padding for smaller screens */
+    max-width: 300px; /* Limit maximum width for larger screens */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s;
+}
+/* home slider ------------------------- */
+.slider {
+    position: relative;
+    width: 100%;
+    height: 60vh;
+    overflow: hidden;
+}
+
+/* Slides container */
+.slides {
+    display: flex;
+    width: 300%;
+    height: 100%;
+    transition: transform 1s ease-in-out;
+}
+
+/* Individual slide */
+.slide {
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+}
+/* ------------------------------------- */
+/* Hover effect for event item */
+.coming-soon-item:hover {
+    transform: translateY(-10px);
+}
+
+/* Heading styling */
+.coming-soon-item h3 {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+/* Paragraph styling */
+.coming-soon-item p {
+    font-size: 1em;
+    margin-bottom: 8px;
+    color: #666;
+}
+
+/* -----------------*/
 /* Events Section */
+
+
 .events,
 .upcoming {
-    margin-bottom: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 20px;
 }
 
 .events h2,
@@ -546,4 +616,23 @@ input[type="submit"]:hover {
         font-size: 14px;
         padding: 8px 16px;
     }
+
+    
+    .coming-soon-item {
+        width: calc(50% - 40px); /* Two items per row for medium screens */
+    }
+
+
+
+    .coming-soon-item {
+        width: calc(33.33% - 40px); /* Three items per row for larger screens */
+    }
+    .slider {
+        height: 40vh;
+    }
+    @media (max-width: 480px) {
+        .slider {
+            height: 30vh;
+        }
+    } 
 }

@@ -15,9 +15,11 @@ use App\Http\Middleware\Auser;
 use Illuminate\Support\Facades\Route;
 
 
-Route::get('/', function () {
-    return view('home');
-});
+// Route::get('/', function () {
+//     return view('home');
+// });
+
+Route::get('/', [HomeController::class,'home'])->name('home');
 
 Route::get('/about', [HomeController::class,'about'])->name('about');
 
