@@ -7,6 +7,8 @@
     <title>UNI Events</title>
     <link rel="stylesheet" href="assets/css/styleshome.css">
     <script src="assets/scripts/script.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+
 </head>
 
 <body>
@@ -21,20 +23,61 @@
         </div>
     </header>
     <main>
-        <section class="search">
-            <h1>Find Your Event Here</h1>
-            <div class="search-bar">
-                <input type="date" id="event-date">
-                <select id="category">
-                    <option value="Music">Music</option>
-                    <option value="Dance">Dance</option>
-                    <option value="Sport">Sport</option>
-                    <option value="Academic">Academic</option>
-                    <option value="Other">Other</option>
-                </select>
-                <button class="search-btn">Search</button>
+        <div class="container">
+            <div class="search">
+                <input type="search" name="search" id="search" placeholder="Search For an Event..." class="form-control">
             </div>
-        </section>
+        </div>
+        {{-- search results will display here --}}
+        <table>
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Faculty</th>
+                    <th>Date</th>
+                    <th>Venue</th>
+                    <th>Event Type</th>
+                </tr>
+            </thead>
+            <tbody class="alldata">
+                @foreach ($eventdata as $event)
+                    <tr>
+                        <td>{{ $event->name }}</td>
+                        <td>{{ $event->faculty }}</td>
+                        <td>{{ $event->date }}</td>
+                        <td>{{ $event->venue }}</td>
+                        <td>{{ $event->event_type }}</td>
+                    </tr>
+                @endforeach
+            </tbody>
+            {{-- <tbody id="Content" class="searchdata">
+            </tbody> --}}
+        </table>
+        {{-- the required js part for the live search is here --}}
+        <script type="text/javascript">
+        $('#home').on('keyup',function(){
+            $value = $(this).val();
+            if ($value) {
+                $('.alldata').hide();
+                $('.searchdata').show();
+            }else{
+                $('.alldata').show();
+                $('.searchdata').hide();
+            }
+            $.ajax({
+                type:'get',
+                url:'{{URL::to('search')}}',
+                data:{'search':$value},
+
+                success:function(data){
+                    console.log(data);
+                    $('#Content').html(data);
+                }
+            });
+        })
+        </script>
+
+        {{-- ================================ --}}
         <h2>Upcoming Events</h2>
         <section class="coming-soon">
             @foreach ($eventdata as $event)
