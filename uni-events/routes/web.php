@@ -15,9 +15,11 @@ use App\Http\Middleware\Auser;
 use Illuminate\Support\Facades\Route;
 
 
-Route::get('/', function () {
-    return view('home');
-});
+// Route::get('/', function () {
+//     return view('home');
+// });
+
+Route::get('/', [HomeController::class,'home'])->name('home');
 
 Route::get('/about', [HomeController::class,'about'])->name('about');
 
@@ -46,6 +48,9 @@ Route::get('/admindashboard', [AdminController::class, 'admindashboard'])->name(
 Route::post('/approveevent/{id}', [EventController::class,'approve'])->name('approve');
 
 Route::post('/rejectevent/{id}', [EventController::class,'reject'])->name('reject');
+
+Route::get('/downloadproposal/{id}', [AuserController::class,'downloadproposal'])->name('downloadproposal');
+
 
 
 Route::get('/dashboard', function () {
