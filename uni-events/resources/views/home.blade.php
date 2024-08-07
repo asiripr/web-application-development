@@ -36,17 +36,14 @@
             </div>
         </section>
         <h2>Upcoming Events</h2>
-        @foreach ($eventdata as $event)
-            <section class="coming-soon">
+        <section class="coming-soon">
+            @foreach ($eventdata as $event)
                 <div class="coming-soon-item">
-                    <h3>Event Name: {{$event->name}}</h3>
-                    <p>Event Type: {{$event->event_type}}</p>
-                    <p>Date: {{$event->name}}</p>
-                    <p>Organized by: {{$event->faculty}}</p>
+                    <h3>{{ $event->name }}</h3>
+                    <p>{{ $event->name }}, conducted by {{ $event->faculty }} and it will be held on {{ $event->date}} at {{ $event->venue}}</p>
                 </div>
-            </section>
-        @endforeach
-
+            @endforeach
+        </section>
         <section class="events">
 
             <h2>Events For You</h2>
