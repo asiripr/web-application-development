@@ -50,12 +50,12 @@
                     </tr>
                 @endforeach
             </tbody>
-            {{-- <tbody id="Content" class="searchdata">
-            </tbody> --}}
+            <tbody id="Content" class="searchdata">
+            </tbody>
         </table>
         {{-- the required js part for the live search is here --}}
         <script type="text/javascript">
-        $('#home').on('keyup',function(){
+        $('#search').on('keyup',function(){
             $value = $(this).val();
             if ($value) {
                 $('.alldata').hide();
