@@ -1,0 +1,251 @@
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
+/* Search Area Styles */
+.searcharea {
+    width: 100%;
+    padding: 20px;
+    background-color: #f8f9fa;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.search input[type="search"] {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ced4da;
+    border-radius: 4px;
+    font-size: 16px;
+}
+
+/* Coming Soon Styles */
+.coming-soon {
+    width: 100%;
+    padding: 20px;
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.coming-soon-item {
+    padding: 15px;
+    border-bottom: 1px solid #e9ecef;
+}
+
+.coming-soon-item:last-child {
+    border-bottom: none;
+}
+
+.coming-soon-item h3 {
+    margin: 0;
+    font-size: 1.5em;
+    color: #343a40;
+}
+
+.coming-soon-item p {
+    margin: 5px 0 0;
+    font-size: 1em;
+    color: #6c757d;
+}
+
+/* Events Styles */
+.events {
+    width: 100%;
+    padding: 20px;
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+    font-size: 16px;
+    text-align: left;
+}
+
+thead tr {
+    background-color: #343a40;
+    color: #ffffff;
+}
+
+thead th, tbody td {
+    padding: 12px 15px;
+    border: 1px solid #dee2e6;
+}
+
+tbody tr:nth-child(even) {
+    background-color: #f8f9fa;
+}
+
+tbody tr:hover {
+    background-color: #e9ecef;
+}
+
+
+/* new_navbar styling */
+.new_navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    background-color: #333;
+    color: #fff;
+}
+
+.new_navbar .new_logo {
+    font-size: 1.5rem;
+}
+
+.new_navbar nav ul {
+    display: flex;
+    gap: 1rem;
+}
+
+.new_navbar nav ul li a {
+    color: #fff;
+}
+
+.new_navbar .new_auth_buttons button {
+    background-color: #444;
+    border: none;
+    padding: 0.5rem 1rem;
+    color: #fff;
+    margin-left: 0.5rem;
+    cursor: pointer;
+}
+
+.new_navbar .new_auth_buttons button.new_join {
+    background-color: #28a745;
+}
+
+
+/* Footer Styles */
+.footer {
+    background-color: #333;
+    color: #fff;
+    padding: 20px 0;
+    font-size: 14px;
+}
+
+.footer .footer-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.footer .footer-section {
+    flex: 1;
+    padding: 10px 20px;
+    min-width: 250px;
+}
+
+.footer .footer-section h2 {
+    font-size: 18px;
+    margin-bottom: 10px;
+    color: #ffc107;
+}
+
+.footer .footer-section p,
+.footer .footer-section ul,
+.footer .footer-section li {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.footer .footer-section ul {
+    margin-top: 10px;
+}
+
+.footer .footer-section ul li a {
+    color: #fff;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.footer .footer-section ul li a:hover {
+    color: #ffc107;
+}
+
+.footer .footer-bottom {
+    text-align: center;
+    padding: 10px 0;
+    border-top: 1px solid #444;
+    margin-top: 20px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .container {
+        padding: 10px;
+    }
+
+    .search input[type="search"] {
+        font-size: 14px;
+        padding: 10px;
+    }
+
+    .coming-soon-item h3 {
+        font-size: 1.2em;
+    }
+
+    .coming-soon-item p {
+        font-size: 0.9em;
+    }
+
+    table, thead, tbody, th, td, tr {
+        display: block;
+        width: 100%;
+    }
+    
+    thead tr {
+        display: none;
+    }
+    
+    tbody tr {
+        margin-bottom: 10px;
+        border: 1px solid #dee2e6;
+        border-radius: 8px;
+        padding: 10px;
+    }
+    
+    tbody td {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 10px;
+        border: none;
+        border-bottom: 1px solid #dee2e6;
+    }
+    
+    tbody td:last-child {
+        border-bottom: none;
+    }
+    
+    tbody td:before {
+        content: attr(data-label);
+        flex-basis: 50%;
+        text-align: left;
+        font-weight: bold;
+    }
+}
