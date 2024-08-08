@@ -51,6 +51,7 @@ Route::post('/rejectevent/{id}', [EventController::class,'reject'])->name('rejec
 
 Route::get('/downloadproposal/{id}', [AuserController::class,'downloadproposal'])->name('downloadproposal');
 
+Route::get('/search', [HomeController::class,'search'])->name('search');
 
 
 Route::get('/dashboard', function () {
