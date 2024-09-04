@@ -39,16 +39,20 @@
                 PUBG gaming sessions to create a relaxed atmosphere and enhance satisfaction.
                 The goal is to foster a sense of community and enjoyment.</p>
         </div>
+        
         <div class="event-card">
-            <img src="assets/images/Missakhabivandana.jpeg" alt="Missakhabivandana">
-            <h3>Missakihivandana</h3>
-            <p>Missakihivandana is a significant programme held on Poson Poya day in June
-                to celebrate the Poson festival. Organized by the Sabaragamuwa University of
-                Sri Lanka (SUSL) union, it features drama, music, and dance performances.
-                This event is a key part of the university's cultural activities, bringing
-                together students and faculty in celebration of this important festival.
+            <img src="assets/images/blood.jpeg" alt="Virtual Rival">
+            <h3>Blood Donation Camp</h3>
+            <p>
+                The Computer Faculty at the University of Sri Lanka, Sabaragamuwa, organized
+                a blood donation camp to celebrate its anniversary. The event, set up at the
+                university's swimming pool, aimed to promote community service and
+                collaboration among students and faculty members. The camp's success was
+                a testament to the collective effort and dedication of all involved,
+                highlighting the importance of community service and collaboration.
             </p>
         </div>
+
     </section>
 
     <section class="events second-column">
@@ -62,16 +66,7 @@
                 collaborate, and strengthen their sense of community through the shared
                 experience of music and cultural performances.</p>
         </div>
-        <div class="event-card">
-            <img src="assets/images/Sipmansal.jpeg" alt="Virtual Rival">
-            <h3>Sipmansala</h3>
-            <p>Sipmasal is a seminar series aimed at all students, covering subjects such as
-                Mathematics, IT, Science, and English. It is organized by the second-year
-                students of the Department of Computing at Sabaragamuwa University of Sri
-                Lanka (SUSL). The series focuses on enhancing students' knowledge and
-                skills in these key areas, providing educational support and fostering
-                academic excellence across the student body.</p>
-        </div>
+       
         <div class="event-card">
             <img src="assets/images/pearl hack.jpeg" alt="Missakhabivandana">
             <h3>Pearl Hack</h3>
@@ -87,28 +82,32 @@
     </section>
 
     <section class="events third-column">
-        <div class="event-card">
-            <img src="assets/images/Infobash.jpeg" alt="Focus NIGHT">
-            <h3>Infobash</h3>
-            <p>"Infobash" is an annual cricket match organized by the Faculty of Computing
-                at Sabaragamuwa University of Sri Lanka (FoC, SUSL). This lively event brings
-                together students from all four batches within the faculty, creating a friendly
-                and competitive atmosphere as they compete in a series of cricket matches.
-                The event is not only a showcase of athletic skills but also serves as a major
-                entertainment highlight of the academic year. </p>
+
+    <div class="event-card">
+            <img src="assets/images/Sipmansal.jpeg" alt="Virtual Rival">
+            <h3>Sipmansala</h3>
+            <p>Sipmasal is a seminar series aimed at all students, covering subjects such as
+                Mathematics, IT, Science, and English. It is organized by the second-year
+                students of the Department of Computing at Sabaragamuwa University of Sri
+                Lanka (SUSL). The series focuses on enhancing students' knowledge and
+                skills in these key areas, providing educational support and fostering
+                academic excellence across the student body.</p>
         </div>
+
+        
+
         <div class="event-card">
-            <img src="assets/images/blood.jpeg" alt="Virtual Rival">
-            <h3>Blood Donation Camp</h3>
-            <p>
-                The Computer Faculty at the University of Sri Lanka, Sabaragamuwa, organized
-                a blood donation camp to celebrate its anniversary. The event, set up at the
-                university's swimming pool, aimed to promote community service and
-                collaboration among students and faculty members. The camp's success was
-                a testament to the collective effort and dedication of all involved,
-                highlighting the importance of community service and collaboration.
+            <img src="assets/images/Missakhabivandana.jpeg" alt="Missakhabivandana">
+            <h3>Missakihivandana</h3>
+            <p>Missakihivandana is a significant programme held on Poson Poya day in June
+                to celebrate the Poson festival. Organized by the Sabaragamuwa University of
+                Sri Lanka (SUSL) union, it features drama, music, and dance performances.
+                This event is a key part of the university's cultural activities, bringing
+                together students and faculty in celebration of this important festival.
             </p>
         </div>
+
+        
         <div class="event-card">
             <img src="assets/images/Koduyathra.jpeg" alt="Missakhabivandana">
             <h3>Koduyathra</h3>
