@@ -1,4 +1,7 @@
 <x-guest-layout>
+    <div class="flex justify-center mb-6">
+        <img src="{{ asset('assets/logos/unievents.png') }}" alt="UniEvents Logo" class="h-20">
+    </div>
     <form method="POST" action="{{ route('register') }}">
         @csrf
 
