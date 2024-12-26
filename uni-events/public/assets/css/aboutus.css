@@ -1,0 +1,71 @@
+/* About Us Section */
+.about-us {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    background-color: #f4f4f4;
+}
+
+.about-us .image {
+    flex: 1 1 300px;
+    max-width: 400px;
+    padding: 10px;
+}
+
+.about-us .image img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+.about-us .text {
+    flex: 2 1 300px;
+    max-width: 600px;
+    padding: 10px;
+}
+
+.social-links {
+    margin-top: 20px;
+}
+
+.social-links a {
+    display: inline-block;
+    margin-right: 10px;
+    text-decoration: none;
+    color: #555;
+}
+
+.social-links i {
+    margin-right: 5px;
+}
+
+/* Services Section */
+.services {
+    text-align: center;
+    padding: 20px;
+    background-color: #fff;
+}
+
+.services .service-cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.service-card {
+    flex: 1 1 300px;
+    max-width: 300px;
+    margin: 10px;
+    padding: 20px;
+    background-color: #f4f4f4;
+    border-radius: 10px;
+    text-align: center;
+}
+
+.service-card img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
