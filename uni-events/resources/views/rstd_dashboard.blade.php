@@ -1,18 +1,4 @@
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Responsible Student Dashboard</title>
-    <link rel="stylesheet" href="assets/css/rstd_dashboard.css">
-</head>
-
-<body>
-    <header>
-        @include('navbar')
-    </header>
-
+<x-app-layout>
     <main>
         <section class="create-proposal-section">
             <h2>Create Event Proposal</h2>
@@ -44,6 +30,4 @@
             <button>Edit Profile</button>
         </section>
     </main>
-</body>
-
-</html>
+</x-app-layout>    

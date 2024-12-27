@@ -1,16 +1,4 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Student Dashboard</title>
-    <link rel="stylesheet" href="assets/css/student_dashboard.css">
-</head>
-<body>
-    <header>
-        @include('navbar')
-    </header>
-
+<x-app-layout>
     <main>
         <section class="search-section">
             <h2>Search Events</h2>
@@ -51,5 +39,4 @@
             <button>Edit Profile</button>
         </section>
     </main>
-</body>
-</html>
+</x-app-layout>

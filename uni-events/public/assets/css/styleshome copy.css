@@ -11,41 +11,7 @@ body, h1, h2, h3, p, ul, li, a, img {
     box-sizing: border-box;
 }
 
-/* new_navbar styling */
-.new_navbar {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 1rem;
-    background-color: #333;
-    color: #fff;
-}
 
-.new_navbar .new_logo {
-    font-size: 1.5rem;
-}
-
-.new_navbar nav ul {
-    display: flex;
-    gap: 1rem;
-}
-
-.new_navbar nav ul li a {
-    color: #fff;
-}
-
-.new_navbar .new_auth_buttons button {
-    background-color: #444;
-    border: none;
-    padding: 0.5rem 1rem;
-    color: #fff;
-    margin-left: 0.5rem;
-    cursor: pointer;
-}
-
-.new_navbar .new_auth_buttons button.new_join {
-    background-color: #28a745;
-}
 
 /* Hero section styling */
 .hero-image img {

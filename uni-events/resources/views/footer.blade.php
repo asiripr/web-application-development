@@ -15,11 +15,11 @@
         </div>
         <div class="footer-section contact">
             <h2>Contact Us</h2>
-            <p>Email: contact@universityevents.com</p>
+            <p>Email: contact@unievents.com</p>
             <p>Phone: +123 456 7890</p>
         </div>
     </div>
     <div class="footer-bottom">
-        &copy; 2024 University Event Management System | Designed by YourName
+        &copy; 2024 University Event Management System | Designed by UniEvents Team
     </div>
 </footer>

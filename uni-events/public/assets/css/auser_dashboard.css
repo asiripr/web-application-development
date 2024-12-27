@@ -1,143 +1,140 @@
-body {
-    font-family: Arial, sans-serif;
+/* General Reset */
+body, h1, h2, h3, p, button, textarea {
     margin: 0;
     padding: 0;
-    background-color: #f4f4f4;
-}
-
-header {
-    background-color: #333;
-    color: white;
-    padding: 1rem 0;
-}
-
-nav ul {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-    display: flex;
-    justify-content: center;
-}
-
-nav ul li {
-    margin: 0 1rem;
-}
-
-nav ul li a {
-    color: white;
-    text-decoration: none;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
 }
 
 main {
     max-width: 1200px;
-    margin: 2rem auto;
-    padding: 0 1rem;
+    margin: 20px auto;
+    padding: 10px;
 }
 
-.pending-proposals-section, .profile-section {
-    background-color: white;
-    padding: 1rem;
-    margin-bottom: 2rem;
-    border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+/* Pending Proposals Section */
+.pending-proposals-section {
+    margin-bottom: 40px;
+}
+
+.pending-proposals-section h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    color: #007BFF;
+    text-align: center;
 }
 
 .proposal-card {
-    background-color: #f9f9f9;
-    padding: 1rem;
-    margin-bottom: 1rem;
-    border: 1px solid #ddd;
+    background: #fff;
     border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    margin-bottom: 20px;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.proposal-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
 }
 
 .proposal-card h3 {
-    margin-top: 0;
+    color: #333;
+    margin-bottom: 10px;
+    font-size: 1.5rem;
 }
 
-.proposal-card button {
-    background-color: #333;
+.proposal-card p {
+    font-size: 1rem;
+    margin-bottom: 10px;
+    color: #555;
+}
+
+.proposal-card a {
+    color: #007BFF;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.proposal-card a:hover {
+    text-decoration: underline;
+}
+
+button {
+    background: #007BFF;
     color: white;
     border: none;
-    padding: 0.5rem 1rem;
     border-radius: 4px;
+    padding: 10px 15px;
     cursor: pointer;
+    font-size: 1rem;
+    margin-top: 10px;
+    transition: background 0.3s;
 }
 
-.proposal-card button:hover {
-    background-color: #555;
+button:hover {
+    background: #0056b3;
 }
 
 .approval-form {
-    margin-top: 1rem;
+    margin-top: 20px;
+    padding: 10px;
+    background: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 4px;
 }
 
 .approval-form textarea {
     width: 100%;
-    padding: 0.5rem;
-    margin-bottom: 0.5rem;
-    border: 1px solid #ccc;
+    height: 60px;
+    margin-bottom: 10px;
+    padding: 10px;
+    border: 1px solid #ddd;
     border-radius: 4px;
+    resize: none;
 }
 
-.approval-form button {
-    background-color: #333;
-    color: white;
-    border: none;
-    padding: 0.5rem 1rem;
-    border-radius: 4px;
-    cursor: pointer;
-    margin-right: 0.5rem;
+/* Profile Section */
+.profile-section h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    color: #28a745;
+    text-align: center;
 }
 
-.approval-form button:hover {
-    background-color: #555;
+.profile-section p {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+    color: #333;
 }
 
 .profile-section button {
-    background-color: #333;
+    background: #28a745;
     color: white;
     border: none;
-    padding: 0.5rem 1rem;
     border-radius: 4px;
+    padding: 10px 15px;
     cursor: pointer;
+    font-size: 1rem;
+    transition: background 0.3s;
 }
 
 .profile-section button:hover {
-    background-color: #555;
+    background: #1e7e34;
 }
 
-/* new_navbar styling */
-.new_navbar {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 1rem;
-    background-color: #333;
-    color: #fff;
-}
+/* Responsive Design */
+@media (max-width: 768px) {
+    .proposal-card, .profile-section {
+        padding: 15px;
+    }
 
-.new_navbar .new_logo {
-    font-size: 1.5rem;
-}
+    h2 {
+        font-size: 1.8rem;
+    }
 
-.new_navbar nav ul {
-    display: flex;
-    gap: 1rem;
-}
-
-.new_navbar nav ul li a {
-    color: #fff;
-}
-
-.new_navbar .new_auth_buttons button {
-    background-color: #444;
-    border: none;
-    padding: 0.5rem 1rem;
-    color: #fff;
-    margin-left: 0.5rem;
-    cursor: pointer;
-}
-
-.new_navbar .new_auth_buttons button.new_join {
-    background-color: #28a745;
+    button {
+        font-size: 0.9rem;
+        padding: 8px 12px;
+    }
 }
