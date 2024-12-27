@@ -82,49 +82,54 @@
                 </div>
             @endforeach
         </section>
-        <section class="events">
+        <section class="myevents">
 
-            <h2>Events For You</h2>
-            <div class="event-list">
-                <div class="event-item">
-                    <img src="assets/images/image 7.jpg" alt="Infobash v3.0">
-                    <h3>InfoBash v3.0</h3>
+            <section class="events first-column">
+                <div class="event-card">
+                    <img src="assets/images/focus-night.jpeg" alt="Focus NIGHT">
+                    <h3>Focus NIGHT</h3>
                 </div>
-                <div class="event-item">
-                    <img src="assets/images/image 8.jpg" alt="Aseniya">
-                    <h3>Aseniya</h3>
+                <div class="event-card">
+                    <img src="assets/images/vr.jpeg" alt="Virtual Rival">
+                    <h3>Virtual Rival</h3>
                 </div>
-                <div class="event-item">
-                    <img src="assets/images/image 9.jpg" alt="Adawwa">
-                    <h3>Adawwa</h3>
+                <div class="event-card">
+                    <img src="assets/images/Missakhabivandana.jpeg" alt="Missakhabivandana">
+                    <h3>Missakihivandana</h3>
                 </div>
-                <div class="upcoming-list">
-                    <div class="upcoming-item">
-                        <img src="assets/images/image 10.jpg" alt="Focus Night">
-                        <h3>Focus Night</h3>
-                    </div>
-                    <div class="upcoming-item">
-                        <img src="assets/images/image 11.jpg" alt="Virtual Rival">
-                        <h3>Virtual Rival</h3>
-                    </div>
-                    <div class="upcoming-item">
-                        <img src="assets/images/image 12.jpg" alt="Missakabhiwandana">
-                        <h3>Missakabhiwandana</h3>
-                    </div>
-                    <div class="upcoming-item">
-                        <img src="assets/images/image 13.jpg" alt="Miyasirawa">
-                        <h3>Miyasirawa</h3>
-                    </div>
-                    <div class="upcoming-item">
-                        <img src="assets/images/image 14.jpg" alt="Sipmanasala">
-                        <h3>Sipmansala</h3>
-                    </div>
-                    <div class="upcoming-item">
-                        <img src="assets/images/image 15.jpg" alt="Diyawara Sihinaya">
-                        <h3>Diyawara Sihinaya</h3>
-                    </div>
+            </section>
+            
+            <section class="events second-column">
+                <div class="event-card">
+                    <img src="assets/images/Miyasirava.jpeg" alt="Focus NIGHT">
+                    <h3>Miyasiravaya</h3>
                 </div>
-            </div>
+                <div class="event-card">
+                    <img src="assets/images/Sipmansal.jpeg" alt="Virtual Rival">
+                    <h3>Sipmansala</h3>
+                </div>
+                <div class="event-card">
+                    <img src="assets/images/pearl hack.jpeg" alt="Missakhabivandana">
+                    <h3>Pearl Hack</h3>
+            
+                </div>
+            </section>
+            
+            <section class="events third-column">
+                <div class="event-card">
+                    <img src="assets/images/Infobash.jpeg" alt="Focus NIGHT">
+                    <h3>Infobash</h3>
+                </div>
+                <div class="event-card">
+                    <img src="assets/images/blood.jpeg" alt="Virtual Rival">
+                    <h3>Blood Donation Camp</h3>
+                </div>
+                <div class="event-card">
+                    <img src="assets/images/Koduyathra.jpeg" alt="Missakhabivandana">
+                    <h3>Koduyathra</h3>
+            
+                </div>
+            </section>
         </section>
 </main>
 @include('footer')
