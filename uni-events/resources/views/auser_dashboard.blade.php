@@ -29,13 +29,6 @@
                 @endif
             @endforeach
         </section>
-
-        <section class="profile-section">
-            <h2>Profile</h2>
-            <p>Name: John Doe</p>
-            <p>Email: john.doe@example.com</p>
-            <button>Edit Profile</button>
-        </section>
     </main>
 
     <script>
@@ -44,5 +37,6 @@
             form.style.display = form.style.display === 'none' ? 'block' : 'none';
         }
     </script>
-    @include('footer')
+    
 </x-app-layout>
+@include('footer')

@@ -1,12 +1,14 @@
 <x-app-layout>
     <main>
         <section class="create-proposal-section">
-            <h2>Create Event Proposal</h2>
-            <button type=""><a href="{{ url('/eventcreation') }}">Submit Proposal</a></button>
+            <h1>Create Event Proposal</h1>
+            <hr>
+            <button type=""><a href="{{ url('/eventcreation') }}"><i>Submit Proposal</i></a></button>
         </section>
-
+        <br><br>
         <section class="submitted-proposals-section">
-            <h2>Submitted Proposals</h2>
+            <h1>Submitted Proposals</h1>
+            
             @foreach ($eventdata as $eventdata)
                 <div class="proposal-card">
                     <p>Status:
@@ -22,12 +24,6 @@
                 </div>
             @endforeach
         </section>
-
-        <section class="profile-section">
-            <h2>Profile</h2>
-            <p>Name: John Doe</p>
-            <p>Email: john.doe@example.com</p>
-            <button>Edit Profile</button>
-        </section>
     </main>
-</x-app-layout>    
+</x-app-layout>
+@include('footer')    

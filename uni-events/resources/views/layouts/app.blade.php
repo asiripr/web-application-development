@@ -23,6 +23,8 @@
     <link rel="stylesheet" href="assets/css/home.css"> 
     <link rel="stylesheet" href="assets/css/eventlist.css"> 
     <link rel="stylesheet" href="assets/css/auser_dashboard.css"> 
+    <link rel="stylesheet" href="assets/css/createevent.css"> 
+    
 
     <!-- Scripts -->
     <script src="assets/scripts/script.js"></script>

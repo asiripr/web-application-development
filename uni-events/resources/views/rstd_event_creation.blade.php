@@ -1,44 +1,27 @@
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>UNI Events</title>
-    <link rel="stylesheet" href="assets/css/styleshome.css">
-</head>
-
-<body>
-
-    <header>
-        @include('navbar')
-    </header>
-
-
-    <div class="container">
-
-        <div class="main-content">
-            <div class="event-form">
-                <form action="{{url('/updateanevent')}}" method="post" enctype="multipart/form-data">
+<x-app-layout>
+    <div class="event-container">
+        <div class="event-main-content">
+            <div class="event-update-form">
+                <form action="{{ url('/updateanevent') }}" method="post" enctype="multipart/form-data">
                     @csrf
-                    <label for="eventName">Event Name</label>
-                    <input type="text" id="eventName" name="eventName" required>
+                    <label for="updateEventName">Event Name</label>
+                    <input type="text" id="updateEventName" name="eventName" required>
 
-                    <label for="faculty">Faculty</label>
-                    <select id="faculty" name="faculty" required>
+                    <label for="updateFaculty">Faculty</label>
+                    <select id="updateFaculty" name="faculty" required>
                         <option value="">Select Faculty</option>
                         <option value="Faculty of Computing">Faculty of Computing</option>
                         <option value="Faculty of Applied Science">Faculty of Applied Science</option>
                         <option value="Faculty of Medicine">Faculty of Medicine</option>
                         <option value="Faculty of Agricultural Sciences">Faculty of Agricultural Sciences</option>
                         <option value="Faculty of Management Studies">Faculty of Management Studies</option>
-                        <option value="Faculty of Socail Sciences and Languages">Faculty of Socail Sciences and Languages</option>
+                        <option value="Faculty of Social Sciences and Languages">Faculty of Social Sciences and Languages</option>
                         <option value="Faculty of Technology">Faculty of Technology</option>
                         <option value="Faculty of Geomatics">Faculty of Geomatics</option>
                     </select>
 
-                    <label for="event_type">Event Type</label>
-                    <select id="event_type" name="event_type" required>
+                    <label for="updateEventType">Event Type</label>
+                    <select id="updateEventType" name="event_type" required>
                         <option value="">Select Type</option>
                         <option value="Sport">Sport</option>
                         <option value="Dance">Dance</option>
@@ -48,27 +31,24 @@
                         <option value="Other">Other</option>
                     </select>
 
-                    <label for="date">Date</label>
-                    <input type="date" id="date" name="date" required>
+                    <label for="updateDate">Date</label>
+                    <input type="date" id="updateDate" name="date" required>
 
-                    <label for="venue">Venue</label>
-                    <input type="text" id="venue" name="venue" required>
+                    <label for="updateVenue">Venue</label>
+                    <input type="text" id="updateVenue" name="venue" required>
 
-                    <label for="proposal">Proposal</label>
-                    <input type="file" name="proposal" id="">
+                    <label for="updateProposal">Proposal</label>
+                    <input type="file" id="updateProposal" name="proposal">
 
-                    <button type="submit" class="submit-btn">Submit</button>
+                    <button type="submit" class="event-submit-btn">Submit</button>
                 </form>
             </div>
 
-            <div class="image-section">
-                <img src="assets/images/image.jpg" alt="Event Image"> <!-- Image path -->
+            <div class="event-image-section">
+                <img src="assets/images/image.jpg" alt="Event Image">
             </div>
         </div>
     </div>
 
     @include('footer')
-
-</body>
-
-</html>
+</x-app-layout>
