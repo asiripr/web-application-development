@@ -55,6 +55,8 @@ body {
     border-radius: 10px;
     overflow: hidden;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 80%; /* Added width for better display */
+    margin: 20px auto; /* Center the slider */
 }
 
 .slides {
@@ -64,7 +66,28 @@ body {
 
 .homeslide {
     width: 100%;
-    height: auto;
+    height: 500px; 
+    
+}
+
+
+.slider-controls {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding: 0 20px;
+}
+
+.slider-controls button {
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 5px;
 }
 
 /* Search Area */
@@ -126,21 +149,107 @@ table th {
     font-size: 24px;
     color: #009688;
     margin-bottom: 20px;
+    text-align: center;
 }
 
+/* Grid Layout for Coming Soon Items */
+.coming-soon-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Responsive columns */
+    gap: 20px; /* Space between items */
+}
+/* coming soon section */
 .coming-soon-item {
-    margin-bottom: 15px;
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    padding: 15px;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.coming-soon-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
 .coming-soon-item h3 {
     font-size: 20px;
     color: #333;
-    margin: 0 0 5px;
+    margin: 0 0 10px;
+    text-align: center;
 }
 
 .coming-soon-item p {
     color: #555;
+    font-size: 14px;
+    line-height: 1.5;
+    text-align: center;
 }
+/* Events */
+
+/* General Section Styling */
+.past-events-section {
+    background-color: #f4f4f9;
+    padding: 40px;
+    text-align: center;
+}
+
+.section-title {
+    font-size: 30px;
+    font-weight: 600;
+    color: #4a4a4a;
+    margin-bottom: 30px;
+    font-family: 'Helvetica', sans-serif;
+}
+
+/* Event Gallery */
+.event-gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+/* Gallery Item */
+.gallery-item {
+    background: #ffffff;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.gallery-item:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+.event-thumbnail {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+}
+
+.event-title {
+    font-size: 18px;
+    font-weight: 500;
+    color: #333;
+    margin: 10px 0 15px;
+    font-family: 'Arial', sans-serif;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .section-title {
+        font-size: 24px;
+    }
+
+    .event-title {
+        font-size: 16px;
+    }
+}
+
 
 /* Media Queries */
 @media (max-width: 768px) {

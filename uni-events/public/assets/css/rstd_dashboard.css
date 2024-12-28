@@ -1,139 +1,98 @@
-body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    background-color: #f4f4f4;
-}
-
-header {
-    background-color: #333;
-    color: white;
-    padding: 1rem 0;
-}
-
-nav ul {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-    display: flex;
-    justify-content: center;
-}
-
-nav ul li {
-    margin: 0 1rem;
-}
-
-nav ul li a {
-    color: white;
-    text-decoration: none;
-}
-
-main {
-    max-width: 1200px;
-    margin: 2rem auto;
-    padding: 0 1rem;
-}
-
-.create-proposal-section, .submitted-proposals-section, .profile-section {
-    background-color: white;
-    padding: 1rem;
-    margin-bottom: 2rem;
+/* General Section Styling */
+.proposal-container, .submitted-proposals-container {
+    text-align: center;
+    padding: 40px;
+    background-color: #f9f9f9;
     border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin-bottom: 30px;
 }
 
-.create-proposal-section form label,
-.create-proposal-section form input,
-.create-proposal-section form select,
-.create-proposal-section form textarea,
-.create-proposal-section form button {
-    display: block;
-    width: 100%;
-    margin-bottom: 1rem;
-    padding: 0.5rem;
-    border: 1px solid #ccc;
-    border-radius: 4px;
+/* Title Styles */
+.create-proposal-title {
+    font-size: 32px;
+    font-weight: 600;
+    color: #333;
+    margin-bottom: 20px;
+    font-family: 'Arial', sans-serif;
 }
 
-.create-proposal-section form button {
-    background-color: #333;
-    color: white;
+.submitted-title {
+    font-size: 28px;
+    font-weight: 500;
+    color: #333;
+    margin-bottom: 20px;
+    font-family: 'Helvetica', sans-serif;
+}
+
+/* Divider */
+.section-divider {
+    width: 50%;
+    margin: 20px auto;
+    border: 1px solid #ddd;
+}
+
+/* Button Styling */
+.create-proposal-btn {
+    background-color: #4CAF50;
+    padding: 15px 30px;
+    border-radius: 5px;
     border: none;
     cursor: pointer;
+    transition: background-color 0.3s ease;
 }
 
-.create-proposal-section form button:hover {
-    background-color: #555;
+.create-proposal-btn:hover {
+    background-color: #45a049;
 }
 
-.submitted-proposals-section .proposal-card {
-    background-color: #f9f9f9;
-    padding: 1rem;
-    margin-bottom: 1rem;
-    border: 1px solid #ddd;
-    border-radius: 8px;
-}
-
-.submitted-proposals-section .proposal-card h3 {
-    margin-top: 0;
-}
-
-.submitted-proposals-section .proposal-card a {
-    color: #333;
+.proposal-link {
+    display: inline-block;
     text-decoration: none;
+    color: white;
+    font-size: 18px;
     font-weight: bold;
 }
 
-.submitted-proposals-section .proposal-card a:hover {
-    text-decoration: underline;
+
+/* Event Card Styling */
+.event-card {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 20px;
+    margin: 15px 0;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
 }
 
-.profile-section button {
-    background-color: #333;
-    color: white;
-    border: none;
-    padding: 0.5rem 1rem;
-    border-radius: 4px;
-    cursor: pointer;
+.event-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
 }
 
-.profile-section button:hover {
-    background-color: #555;
+.proposal-status {
+    font-size: 16px;
+    color: #ff6347;
+    font-weight: bold;
 }
 
-
-/* new_navbar styling */
-.new_navbar {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 1rem;
-    background-color: #333;
-    color: #fff;
+.event-name, .event-date, .event-venue {
+    font-size: 18px;
+    color: #333;
+    margin: 5px 0;
 }
 
-.new_navbar .new_logo {
-    font-size: 1.5rem;
-}
+/* Responsive Design */
+@media (max-width: 768px) {
+    .create-proposal-title {
+        font-size: 28px;
+    }
 
-.new_navbar nav ul {
-    display: flex;
-    gap: 1rem;
-}
+    .submitted-title {
+        font-size: 24px;
+    }
 
-.new_navbar nav ul li a {
-    color: #fff;
-}
-
-.new_navbar .new_auth_buttons button {
-    background-color: #444;
-    border: none;
-    padding: 0.5rem 1rem;
-    color: #fff;
-    margin-left: 0.5rem;
-    cursor: pointer;
-}
-
-.new_navbar .new_auth_buttons button.new_join {
-    background-color: #28a745;
+    .event-card {
+        padding: 15px;
+    }
 }

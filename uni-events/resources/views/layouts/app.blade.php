@@ -22,12 +22,15 @@
     <link rel="stylesheet" href="assets/css/aboutus.css"> 
     <link rel="stylesheet" href="assets/css/home.css"> 
     <link rel="stylesheet" href="assets/css/eventlist.css"> 
+    <link rel="stylesheet" href="assets/css/adminstyle.css"> 
+    <link rel="stylesheet" href="assets/css/admin_updateuser.css"> 
     <link rel="stylesheet" href="assets/css/auser_dashboard.css"> 
     <link rel="stylesheet" href="assets/css/createevent.css"> 
     
 
     <!-- Scripts -->
     <script src="assets/scripts/script.js"></script>
+    <script src="assets/scripts/slider.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
     @vite(['resources/css/app.css', 'resources/js/app.js'])
 </head>
