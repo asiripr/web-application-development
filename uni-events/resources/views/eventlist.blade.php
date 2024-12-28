@@ -106,8 +106,10 @@
         </p>
 
     </div>
-</section>
+    <!-- footer section -->
 
-<!-- footer section -->
-@include('footer')
+
+
 </x-app-layout>
+@include('footer')
+</section>

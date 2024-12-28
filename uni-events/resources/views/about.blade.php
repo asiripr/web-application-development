@@ -1,3 +1,4 @@
+
 <x-app-layout>
     <section class="banner">
         <h2>About Us</h2>
@@ -41,5 +42,6 @@
             </div>
         </section>
     </main>
-    @include('footer')
+    
 </x-app-layout>
+@include('footer')
